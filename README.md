@@ -1,4 +1,4 @@
-# Mascote Virtual — projeto corrigido
+# Mascote Virtual — V1
 
 ## Executar
 Abra a pasta no VS Code e use **Live Server** no `index.html`.
