@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #edf2f8; color: #25334a; font: 16px system-ui, sans-serif; padding: 24px; }
+.game { width: min(100%, 560px); padding: 30px; background: white; border-radius: 24px; box-shadow: 0 12px 40px #25334a18; }
+.game-header { text-align: center; } h1 { margin: 0; } .game-header p { color: #596579; }
+.mascot-area { display: grid; justify-items: center; gap: 18px; margin: 36px 0 24px; }
+.mascot { position: relative; width: 140px; height: 130px; background: #8998ae; border-radius: 48% 48% 42% 42%; border: 4px solid #53647d; transition: background .3s, transform .3s; }
+.ear { position: absolute; top: -24px; width: 44px; height: 60px; background: #8998ae; border: 4px solid #53647d; border-radius: 8px 80% 0 0; z-index: 0; } .ear.left { left: 0; transform: rotate(-18deg); } .ear.right { right: 0; transform: scaleX(-1) rotate(-18deg); }
+.face { position: absolute; inset: 0; border-radius: inherit; background: inherit; }
+.eye { position: absolute; top: 43px; width: 12px; height: 16px; background: #25334a; border-radius: 50%; } .eye.left { left: 30px; } .eye.right { right: 30px; }
+.nose { position: absolute; top: 65px; left: 55px; width: 22px; height: 15px; background: #25334a; border-radius: 50%; }
+.mouth { position: absolute; top: 84px; left: 49px; width: 34px; height: 16px; border-bottom: 3px solid #25334a; border-radius: 50%; }
+.feliz .mouth { height: 23px; } .triste .mouth, .doente .mouth { border-bottom: 0; border-top: 3px solid #25334a; }
+.cansado .eye { height: 5px; top: 51px; } .doente { background: #a5b99d; } .mascot.game-over { background: #b0b4bd; transform: rotate(-8deg); } .mascot.game-over .eye { height: 3px; }
+.status-panel { display: grid; gap: 15px; } .status-info { display: flex; justify-content: space-between; margin-bottom: 6px; }
+.bar { height: 12px; border-radius: 8px; background: #e8ecf2; overflow: hidden; } .fill { height: 100%; width: 100%; border-radius: inherit; transition: width .3s; } .vida { background: #e66476; } .fome { background: #eda54f; } .energia { background: #5b9ae0; } .felicidade { background: #7cb879; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 24px; } button { border: 0; background: #e9eef8; color: #25334a; border-radius: 10px; padding: 13px; font: inherit; font-weight: 600; cursor: pointer; } button:hover { background: #d8e3f6; } button:focus-visible { outline: 3px solid #3978cf; outline-offset: 3px; } button:disabled { opacity: .45; cursor: default; }
+.message { min-height: 24px; text-align: center; color: #596579; } .game-over { padding: 16px; text-align: center; background: #fff0f0; border-radius: 12px; } .hidden { display: none; }
+@media (max-width: 400px) { body { padding: 12px; } .game { padding: 20px; } }

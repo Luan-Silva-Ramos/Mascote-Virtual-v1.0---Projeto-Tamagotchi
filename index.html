@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mascote Virtual 2.0</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="game">
+        <header class="game-header">
+            <h1>Mascote Virtual</h1>
+            <p>Cuide do seu mascote antes que seus status cheguem ao limite.</p>
+        </header>
+
+        <section class="mascot-area">
+            <div id="mascote" class="mascot normal">
+                <div class="ear left"></div>
+                <div class="ear right"></div>
+                <div class="face">
+                    <div class="eye left"></div>
+                    <div class="eye right"></div>
+                    <div class="nose"></div>
+                    <div class="mouth"></div>
+                </div>
+            </div>
+
+            <div class="state">
+                <span>Estado:</span>
+                <strong id="estado">Normal</strong>
+            </div>
+        </section>
+
+        <section class="status-panel">
+            <div class="status">
+                <div class="status-info">
+                    <span>❤️ Vida</span>
+                    <strong id="vidaTexto">100</strong>
+                </div>
+                <div class="bar"><div id="vidaBar" class="fill vida"></div></div>
+            </div>
+
+            <div class="status">
+                <div class="status-info">
+                    <span>🍖 Saciedade</span>
+                    <strong id="fomeTexto">100</strong>
+                </div>
+                <div class="bar"><div id="fomeBar" class="fill fome"></div></div>
+            </div>
+
+            <div class="status">
+                <div class="status-info">
+                    <span>⚡ Energia</span>
+                    <strong id="energiaTexto">100</strong>
+                </div>
+                <div class="bar"><div id="energiaBar" class="fill energia"></div></div>
+            </div>
+
+            <div class="status">
+                <div class="status-info">
+                    <span>😊 Felicidade</span>
+                    <strong id="felicidadeTexto">100</strong>
+                </div>
+                <div class="bar"><div id="felicidadeBar" class="fill felicidade"></div></div>
+            </div>
+        </section>
+
+        <section class="actions">
+            <button id="alimentar">🍖 Alimentar</button>
+            <button id="brincar">🎾 Brincar</button>
+            <button id="dormir">😴 Dormir</button>
+            <button id="curar">💊 Curar</button>
+        </section>
+
+        <p id="mensagem" class="message" role="status" aria-live="polite">Seu mascote está bem.</p>
+
+        <div id="gameOver" class="game-over hidden">
+            <h2>GAME OVER</h2>
+            <p>Seu mascote não conseguiu sobreviver.</p>
+            <button id="reiniciar">Reiniciar</button>
+        </div>
+    </main>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
